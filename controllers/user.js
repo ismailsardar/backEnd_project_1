@@ -55,8 +55,8 @@ userController.registerUser = asyncHandler(async (req, res) => {
         path: "/",
         httpOnly: true,
         expires: new Date(Date.now() + 1000 * 86400), // 1 day
-        sameSite: "none",
-        secure: true,
+        // sameSite: "none",
+        // secure: true,
     });
 
     //user Doucument respons
@@ -109,8 +109,8 @@ userController.loginUser = asyncHandler(async (req, res) => {
         path: "/",
         httpOnly: true,
         expires: new Date(Date.now() + 1000 * 86400), // 1 day
-        sameSite: "none",
-        secure: true,
+        // sameSite: "none",
+        // secure: true,
     });
 
     //user respons
@@ -138,8 +138,8 @@ userController.logOut = asyncHandler(async (req, res) => {
         path: '/',
         httpOnly: true,
         expires: new Date(0),
-        sameSite: 'none',
-        secure: true,
+        // sameSite: 'none',
+        // secure: true,
     });
     return res.status(200).json({message : 'Successfully logOut'});
 });
@@ -195,7 +195,7 @@ userController.updateUser = asyncHandler(async (req, res) => {
     //date update
     if (user) {
         const {name, email, photo, phone, bio} = user;
-
+ 
         //data from body
         user.email = email;
         user.name = req.body.name || name;

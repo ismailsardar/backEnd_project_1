@@ -25,7 +25,7 @@ const productSchema = mongoose.Schema(
             required: [true, "Please Add a category"],
             trim: true,
         },
-        quentity:{
+        quantity:{
             type: String,
             required: [true, "Please Add a quentity"],
             trim: true,
