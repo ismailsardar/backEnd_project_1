@@ -112,7 +112,7 @@ userController.loginUser = asyncHandler(async (req, res) => {
         // sameSite: "none",
         // secure: true,
     });
-
+ 
     //user respons
     if (userExists && passwordIsCorrect) {
         const {_id, name, email, photo, phone, bio} = userExists;
